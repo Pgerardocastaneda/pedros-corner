@@ -1,0 +1,235 @@
+/* Design tokens: change a value here and it updates everywhere it is used */
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f5f6f8;
+  --color-text: #1a1d23;
+  --color-muted: #5b6370;
+  --color-accent: #2456d6;
+  --color-border: #dfe2e7;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+
+  --content-width: 46rem;
+  --radius: 0.5rem;
+}
+
+/* Follows the visitor's operating system setting */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #12141a;
+    --color-surface: #1b1e26;
+    --color-text: #e8eaee;
+    --color-muted: #a0a7b4;
+    --color-accent: #7ea2ff;
+    --color-border: #2c303a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Stops the sticky header covering a section when you jump to it */
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-bg);
+  z-index: 10;
+}
+
+/* Header and navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.nav__brand {
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.nav__links a:hover {
+  color: var(--color-accent);
+}
+
+/* Page layout */
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+.hero {
+  padding: var(--space-5) 0 var(--space-4);
+}
+
+.hero__tagline {
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Experience and education entries */
+.entry + .entry {
+  margin-top: var(--space-3);
+}
+
+.entry__meta {
+  color: var(--color-muted);
+  margin: 0.25rem 0 var(--space-1);
+}
+
+.entry ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+/* Project cards: as many columns as fit, each at least 16rem wide */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-2);
+}
+
+.card {
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.card p {
+  margin: var(--space-1) 0 var(--space-2);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+}
+
+.tags li {
+  font-size: 0.8125rem;
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-muted);
+}
+
+.achievements {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.achievements li + li {
+  margin-top: var(--space-1);
+}
+
+.site-footer {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-2);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}

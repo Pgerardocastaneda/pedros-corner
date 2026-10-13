@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pedro Castaneda</title>
+    <meta
+      name="description"
+      content="Portfolio of Pedro Castaneda: experience, education, projects and achievements."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__brand" href="#top">Pedro's Corner</a>
+        <ul class="nav__links">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <h1>Pedro Castaneda</h1>
+        <!-- TODO: one sentence on who you are and what you want to build -->
+        <p class="hero__tagline">
+          Aspiring software engineer. I like building things for the web.
+        </p>
+        <ul class="hero__links">
+          <li><a href="https://github.com/Pgerardocastaneda">GitHub</a></li>
+          <!-- TODO: replace with your real LinkedIn URL and contact email -->
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <!-- Each job is an <article>: copy this block to add another -->
+        <article class="entry">
+          <header class="entry__header">
+            <h3>Job Title</h3>
+            <p class="entry__meta">Company Name · Jan 2025 – Present</p>
+          </header>
+          <ul>
+            <li>What you did, and the result it had. Lead with a verb.</li>
+            <li>Use numbers where you can: "cut load time by 30%".</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+
+        <article class="entry">
+          <header class="entry__header">
+            <h3>Degree or Program</h3>
+            <p class="entry__meta">School Name · 2021 – 2025</p>
+          </header>
+          <p>Relevant coursework, honors, or activities.</p>
+        </article>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Pedro's Corner</h3>
+            <p>This site. Hand-written HTML, CSS and JavaScript, no frameworks.</p>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <a href="https://github.com/Pgerardocastaneda">View code</a>
+          </article>
+
+          <article class="card">
+            <h3>Project Name</h3>
+            <p>The problem it solves and what you learned building it.</p>
+            <ul class="tags">
+              <li>Tech</li>
+            </ul>
+            <a href="#">View code</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="achievements" aria-labelledby="achievements-heading">
+        <h2 id="achievements-heading">Achievements</h2>
+
+        <ul class="achievements">
+          <li><strong>Award or certification</strong> — who gave it and when.</li>
+          <li><strong>Another achievement</strong> — one line of context.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Pedro Castaneda</p>
+    </footer>
+  </body>
+</html>
